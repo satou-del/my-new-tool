@@ -77,7 +77,10 @@ body {
 }
 
 .brand-text span {
+    font-size: 0.9rem;
     font-weight: 700;
+    color: #1a202c;
+    display: inline-block;
 }
 
 .progress-nav {
@@ -351,7 +354,8 @@ small {
         padding: 1.5rem 1rem;
     }
 
-    .logo span,
+    /* .logo span hidden only for narrow viewports where sidebar is collapsed */
+    .sidebar .nav-item .step-num + span, 
     .step-label {
         display: none;
     }
