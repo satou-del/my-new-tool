@@ -49,15 +49,32 @@ body {
     z-index: 100;
 }
 
-.logo h1 {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
 }
 
-.logo span {
-    color: var(--primary-light);
+.brand-accent {
+    width: 4px;
+    height: 1.8rem;
+    background-color: #e60012; /* Ohara Red */
+    border-radius: 2px;
+}
+
+.brand-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #1a202c; /* Deep Dark Gray */
+    font-size: 0.9rem;
+    line-height: 1.25;
+}
+
+.brand-text span {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
 }
 
 .progress-nav {
