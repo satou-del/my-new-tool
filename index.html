@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己分析 & キャリアデザインツール | Career Self-Analysis</title>
+    <meta name="description" content="新卒就活生のための自己分析サポートツール。4つのステップで強み・弱みを言語化し、ESや面接に活用できる形に整理します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>Career<span>Insight</span></h1>
+            </div>
+            <nav class="progress-nav">
+                <ul>
+                    <li class="nav-item active" data-step="1">
+                        <span class="step-num">01</span>
+                        <span class="step-label">経験の構造化</span>
+                    </li>
+                    <li class="nav-item" data-step="2">
+                        <span class="step-num">02</span>
+                        <span class="step-label">傾向の特定</span>
+                    </li>
+                    <li class="nav-item" data-step="3">
+                        <span class="step-num">03</span>
+                        <span class="step-label">武器と盾の言語化</span>
+                    </li>
+                    <li class="nav-item" data-step="4">
+                        <span class="step-num">04</span>
+                        <span class="step-label">社会での再現性</span>
+                    </li>
+                    <li class="nav-item" data-step="5">
+                        <span class="step-num">05</span>
+                        <span class="step-label">最終確認と出力</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="main-header">
+                <h2>自己分析ワークシート</h2>
+                <div class="header-actions">
+                    <button id="save-draft" class="btn btn-secondary">一時保存</button>
+                    <button id="reset-form" class="btn btn-danger">リセット</button>
+                </div>
+            </header>
+
+            <form id="analysis-form">
+                <!-- Step 1: Experience Structure -->
+                <section id="step-1" class="form-step active">
+                    <div class="step-header">
+                        <h3>Step 01: 経験の構造化</h3>
+                        <p>学業、バイト、サークル等での事実を客観的に整理しましょう。</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience-context">経験したこと（事実ベース）</label>
+                        <textarea id="experience-context" name="experience-context" placeholder="例：長期インターンでの営業、大学のゼミ活動、部活動での大会出場など" required></textarea>
+                        <small>いつ、どこで、何をしていたか事実のみを記載します。</small>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="experience-success">成功体験・頑張ったこと</label>
+                            <textarea id="experience-success" name="experience-success" placeholder="目標に対してどのように取り組み、どんな結果が得られたか" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience-failure">失敗体験・苦労したこと</label>
+                            <textarea id="experience-failure" name="experience-failure" placeholder="壁にぶつかった時の状況と、その時の気持ち" required></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 2: Identify Tendencies -->
+                <section id="step-2" class="form-step">
+                    <div class="step-header">
+                        <h3>Step 02: 傾向の特定</h3>
+                        <p>過去の経験から、あなたの行動特性（クセ）を探ります。</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="high-performance">最も高いパフォーマンスを発揮する条件</label>
+                        <textarea id="high-performance" name="high-performance" placeholder="例：期限が明確な時、チームで協力している時、課題が困難な時など" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="stagnation-pattern">思考・行動が停滞するパターン</label>
+                        <textarea id="stagnation-pattern" name="stagnation-pattern" placeholder="例：指示が曖昧な時、一度に多くのことを抱えすぎた時など" required></textarea>
+                    </div>
+                </section>
+
+                <!-- Step 3: Weapons and Shields (Strengths and Weaknesses) -->
+                <section id="step-3" class="form-step">
+                    <div class="step-header">
+                        <h3>Step 03: 武器と盾の言語化</h3>
+                        <p>強みを「武器」として尖らせ、弱みを「盾」で守るための言語化です。</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="strength-name">あなたの「強み」に名前をつける</label>
+                        <input type="text" id="strength-name" name="strength-name" placeholder="例：完遂力、巻き込み型推進力、徹底した仮設思考力など" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="strength-detail">強みの具体的な根拠</label>
+                        <textarea id="strength-detail" name="strength-detail" placeholder="なぜその強みがあると言えるのか、具体的な行動例を挙げてください。" required></textarea>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="weakness">弱み（課題）</label>
+                            <textarea id="weakness" name="weakness" placeholder="どのような場面で課題感を感じるか" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="weakness-countermeasure">弱みに対する「工夫・改善策」</label>
+                            <textarea id="weakness-countermeasure" name="weakness-countermeasure" placeholder="弱みが出ないように、具体的にどのような行動をセットにしているか" required></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 4: Reproducibility in Society -->
+                <section id="step-4" class="form-step">
+                    <div class="step-header">
+                        <h3>Step 04: 社会での再現性</h3>
+                        <p>言語化した強み・弱みを、実際の仕事現場でどう活かすか考えます。</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="contribution">企業への貢献（どう強みを使うか）</label>
+                        <textarea id="contribution" name="contribution" placeholder="営業、企画、事務など、具体的な職種での活躍イメージを記載してください。" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="risk-control">リスクコントロール（どう弱みを抑えるか）</label>
+                        <textarea id="risk-control" name="risk-control" placeholder="仕事をする上で、弱みによるミスをどう防ぐか、周囲とどう連携するか。" required></textarea>
+                    </div>
+                </section>
+
+                <!-- Step 5: Final Review -->
+                <section id="step-5" class="form-step">
+                    <div class="step-header">
+                        <h3>Step 05: 最終確認と出力</h3>
+                        <p>入力内容をまとめました。ESや面接の準備に活用してください。</p>
+                    </div>
+                    <div id="final-summary" class="summary-card">
+                        <!-- Content will be generated by JS -->
+                        <div class="placeholder">全てのステップを入力すると、こちらにプレビューが表示されます。</div>
+                    </div>
+                    <div class="summary-actions">
+                        <button type="button" id="copy-summary" class="btn btn-primary">クリップボードにコピー</button>
+                        <button type="button" id="download-summary" class="btn btn-secondary">テキストとして保存</button>
+                    </div>
+                </section>
+
+                <!-- Navigation Buttons -->
+                <div class="form-navigation">
+                    <button type="button" id="prev-btn" class="btn btn-outline" disabled>戻る</button>
+                    <button type="button" id="next-btn" class="btn btn-primary">次へ進む</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
