@@ -355,7 +355,7 @@ small {
     }
 
     /* .logo span hidden only for narrow viewports where sidebar is collapsed */
-    .sidebar .nav-item .step-num + span, 
+    .sidebar .nav-item .step-num+span,
     .step-label {
         display: none;
     }
@@ -418,7 +418,7 @@ small {
     margin-top: 5rem;
     padding: 4rem 0 2rem;
     border-top: 1px solid var(--card-border);
-    text-align: center;
+    /* text-align: center; */
 }
 
 .footer-logo {
